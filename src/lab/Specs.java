@@ -15,6 +15,13 @@ package lab;
  * ==========================================================================
  */
 public class Specs {
+    /**
+     * ฟังก์ชั่นนี้ทําการค้นหาตําเเหน่งเเรกที่เจอ key ใน array
+     * @param arr ที่ถูกค้นหา
+     * @param key คําที่ค้นหา
+     * @return ตําเเหน่งที่เจอ ถ้าไม่เจอจะส่ง -1
+     *@throws IllegalArgumentException ถ้า arr เป็น null
+     */
 
     // TODO ข้อ 4: เขียน JavaDoc ให้เมธอดนี้
     public static int firstIndexOf(int[] arr, int key) {
@@ -26,9 +33,10 @@ public class Specs {
 
     // TODO ข้อ 5: เขียน JavaDoc ให้เมธอดนี้
     /**
-     * 
-     * @param radius
-     * @return
+     * ฟังก์ชั่นนี้ทัาการคํานวณหาพื้นที่ของวงกลมตามรัศมีที่กําหนด
+     * @param radius รัศมีของวงกลมต้องมีค่า  >= 0
+     * @return พื้นที่ของวงกลมที่คํานวรได้
+     * @throws IllegalArgumentException ถ้ารัศมีมีค่าเท่ากับ 0
      */
     public static double circleArea(double radius) {
         if (radius < 0) throw new IllegalArgumentException("radius must be >= 0");
@@ -38,6 +46,11 @@ public class Specs {
     // TODO ข้อ 6: เขียน JavaDoc ให้เมธอดนี้
     //   (เมธอดนี้ตัดช่องว่างหน้า-หลัง แล้วแปลงเป็นตัวพิมพ์เล็ก;
     //    input null ให้คืน string ว่าง)
+    /**
+     * ฟังก์ชั่นทัาการตัดช่องว่างทั้งหน้าทั้งหลังข้อความ เเละเเปลงตัวอัการทั้งหมดเป็นตัวพิมพ์เล็ก
+     * @param s ข้อความที่ต้องการสามารถเป็น nullได้
+     * @return ข้อความที่ถูกตัดช่องว่างหน้าเเละหลังเป็นตัวพิมพ์เล็กเเล้วหรือคืนค่า String ว่าง("")ถ้า s เป็น null
+     */
     public static String normalize(String s) {
         if (s == null) return "";
         return s.trim().toLowerCase();
